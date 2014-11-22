@@ -1,5 +1,5 @@
 /**
- * angular-sofa-address - v0.1.0 - 2014-11-05
+ * angular-sofa-address - v0.1.0 - 2014-11-20
  * http://www.sofa.io
  *
  * Copyright (c) 2014 CouchCommerce GmbH (http://www.couchcommerce.com / http://www.sofa.io) and other contributors
@@ -12,13 +12,13 @@ angular.module('sofa.address.templates', ['sofa-address.tpl.html']);
 
 angular.module("sofa-address.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("sofa-address.tpl.html",
-    "<address>\n" +
-    "  <span>{{data.company}}</span>\n" +
-    "  <span>{{data.name}} {{data.surname}}</span>\n" +
-    "  <span>{{data.street}} {{data.streetnumber}}</span>\n" +
-    "  <span ng-if=\"data.streetextra\">{{data.streetextra}}</span>\n" +
-    "  <span>{{data.zip}} {{data.city}}</span>\n" +
-    "  <span>{{data.country.label}}</span>\n" +
+    "<address class=\"sofa-address\">\n" +
+    "    <span class=\"sofa-address__name\">{{data.firstName}} {{data.lastName}}</span>\n" +
+    "    <span class=\"sofa-address__company\">{{data.company}}</span>\n" +
+    "    <span class=\"sofa-address__street\">{{data.street}} {{data.streetNumber}}</span>\n" +
+    "    <span class=\"sofa-address__street\" ng-if=\"data.streetExtra\">{{data.streetExtra}}</span>\n" +
+    "    <span class=\"sofa-address__city\">{{data.zip}} {{data.city}}</span>\n" +
+    "    <span class=\"sofa-address__country\">{{data.country.label}}</span>\n" +
     "</address>\n" +
     "");
 }]);

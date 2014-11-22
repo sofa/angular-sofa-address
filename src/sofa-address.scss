@@ -1,0 +1,10 @@
+.sofa-address {
+    & > span {
+        display: block;
+        font-style: normal;
+    }
+}
+.sofa-address__name {
+    font-weight: 700;
+    margin-bottom: .25rem;
+}

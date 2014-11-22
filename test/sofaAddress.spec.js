@@ -14,10 +14,10 @@ describe('sofa.address', function () {
     it('should display address data', function () {
         $rootScope.data = {
             company: 'Company',
-            name: 'Name',
-            surname: 'Surname',
+            firstName: 'Name',
+            lastName: 'Surname',
             street: 'Street',
-            streetnumber: '12',
+            streetNumber: '12',
             zip: '00000',
             city: 'City',
             country: {
@@ -37,11 +37,11 @@ describe('sofa.address', function () {
     it('should display street extra if applied', function () {
         $rootScope.data = {
             company: 'Company',
-            name: 'Name',
-            surname: 'Surname',
+            firstName: 'Name',
+            lastName: 'Surname',
             street: 'Street',
-            streetextra: 'b',
-            streetnumber: '12',
+            streetExtra: 'b',
+            streetNumber: '12',
             zip: '00000',
             city: 'City',
             country: {
