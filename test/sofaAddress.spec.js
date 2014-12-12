@@ -13,44 +13,44 @@ describe('sofa.address', function () {
 
     it('should display address data', function () {
         $rootScope.data = {
-            company: 'Company',
-            firstName: 'Name',
-            lastName: 'Surname',
-            street: 'Street',
+            company: 'Sansibar',
+            firstName: 'John',
+            lastName: 'Doe',
+            street: 'Steintor',
             streetNumber: '12',
-            zip: '00000',
-            city: 'City',
+            zipCode: '30159',
+            city: 'Hannover',
             country: {
-                label: 'Germany'
+                label: 'Deutschland'
             }
         };
         element = $compile('<sofa-address data="data"></sofa-address>')($rootScope);
         $rootScope.$digest();
         var children = element.find('span');
-        expect(children[0].innerText).toEqual('Company');
-        expect(children[1].innerText).toEqual('Name Surname');
-        expect(children[2].innerText).toEqual('Street 12');
-        expect(children[3].innerText).toEqual('00000 City');
-        expect(children[4].innerText).toEqual('Germany');
+        expect(children[0].innerText).toEqual('John Doe');
+        expect(children[1].innerText).toEqual('Sansibar');
+        expect(children[2].innerText).toEqual('Steintor 12');
+        expect(children[3].innerText).toEqual('30159 Hannover');
+        expect(children[4].innerText).toEqual('Deutschland');
     });
 
     it('should display street extra if applied', function () {
         $rootScope.data = {
-            company: 'Company',
-            firstName: 'Name',
-            lastName: 'Surname',
-            street: 'Street',
-            streetExtra: 'b',
+            company: 'Sansibar',
+            firstName: 'John',
+            lastName: 'Doe',
+            street: 'Steintor',
+            streetAdditional: '1. Etage',
             streetNumber: '12',
-            zip: '00000',
-            city: 'City',
+            zipCode: '30159',
+            city: 'Hannover',
             country: {
-                label: 'Germany'
+                label: 'Deutschland'
             }
         };
         element = $compile('<sofa-address data="data"></sofa-address>')($rootScope);
         $rootScope.$digest();
         var children = element.find('span');
-        expect(children[3].innerText).toEqual('b');
+        expect(children[3].innerText).toEqual('1. Etage');
     });
 });

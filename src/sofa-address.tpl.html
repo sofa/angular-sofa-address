@@ -2,7 +2,7 @@
     <span class="sofa-address__name">{{data.firstName}} {{data.lastName}}</span>
     <span class="sofa-address__company">{{data.company}}</span>
     <span class="sofa-address__street">{{data.street}} {{data.streetNumber}}</span>
-    <span class="sofa-address__street" ng-if="data.streetExtra">{{data.streetExtra}}</span>
-    <span class="sofa-address__city">{{data.zip}} {{data.city}}</span>
+    <span class="sofa-address__street" ng-if="data.streetAdditional">{{data.streetAdditional}}</span>
+    <span class="sofa-address__city">{{data.zipCode}} {{data.city}}</span>
     <span class="sofa-address__country">{{data.country.label}}</span>
 </address>
